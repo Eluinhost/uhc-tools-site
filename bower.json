@@ -1,0 +1,14 @@
+{
+  "name": "uhc-tools",
+  "version": "0.0.1",
+  "authors": [
+    "Eluinhost"
+  ],
+  "description": "Collection of uhc plugins/tools",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "semantic-ui": "~2.0.8",
+    "lodash": "~3.10.1"
+  }
+}

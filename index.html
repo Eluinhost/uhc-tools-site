@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UHC.gg Tools</title>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.min.css" />
+    <link rel="stylesheet" href="main.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="ui container">
+    <div class="ui segment">
+        <h2 class="ui center aligned icon header">
+            <i class="settings icon"></i>
+            <div class="content">
+                UHC Tools
+                <div class="sub header">A list of tools that may and or may not be useful.</div>
+            </div>
+        </h2>
+        <a class="ui red label attached bottom right updated" data-content="Last updated" data-variation="basic">22nd August 2015</a>
+
+    </div>
+
+    <div class="ui red two doubling cards"></div>
+</div>
+
+<script type="text/template" class="template">
+    <% _.each( sc.projects, function( project ){ %>
+        <div class="card">
+            <div class="content">
+                <img class="right floated mini ui image" src="favicon.png">
+                <div class="header">
+                    <%- project.name %>
+                </div>
+                <div class="meta">
+                    Compatability: <%- project.compat ? project.compat : 'N/A' %>
+                </div>
+                <div class="description">
+                    <%- project.description %>
+                </div>
+            </div>
+            <div class="extra content">
+                <div class="ui two buttons">
+                    <a class="ui basic blue button<%= project.source != null ? '' : ' disabled' %>" <% if (project.source) { %>href="<%- project.source %>"<% } %>>Source</a>
+                    <a class="ui basic green button<%= project.downloads != null ? '' : ' disabled' %>" <% if (project.downloads) { %>href="<%- project.downloads %>"<% } %>><%= project.downloadString ? project.downloadString : 'Downloads'%></a>
+                </div>
+            </div>
+            <div class="extra content">
+                <% if (project.version) { %><span class="right floated star"><%- project.version %> <i class="code icon"></i></span><% } %>
+                <span class="left floated idea"><i class="idea icon"></i> <%- project.type %></span>
+            </div>
+        </div>
+    <% }); %>
+</script>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/semantic-ui/dist/semantic.min.js"></script>
+<script src="bower_components/lodash/lodash.min.js"></script>
+<script src="projects.js"></script>
+<script type="text/javascript">
+    _.templateSettings.variable = "sc";
+
+    var templateRaw = $('script.template').html();
+
+    var template = _.template(templateRaw)({projects: projects});
+
+    $('.ui.cards').append(template);
+
+    $('.updated').popup();
+</script>
+</body>
+</html>
