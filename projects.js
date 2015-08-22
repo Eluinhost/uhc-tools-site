@@ -42,9 +42,10 @@ var projects = [
   },
   {
     name: 'Hidden Health',
-    version: '1.0',
+    version: '1.1',
     description: 'Hides a players health and/or food level from them',
     source: 'https://github.com/UltraSoftcore/hiddenhealth',
+    downloads: 'https://github.com/UltraSoftcore/hiddenhealth/releases',
     type: 'Plugin',
     compat: '1.7.9+'
   }
