@@ -66,6 +66,15 @@ var projects = [
     downloads: 'https://github.com/Eluinhost/migration/releases',
     type: 'Plugin',
     compat: '1.8.8'
+  },
+  {
+    name: 'PurchaseableEnchants',
+    version: '1.0.0',
+    description: 'Allow players to purchase enchants as upgrades, removes RNG',
+    source: 'https://github.com/Eluinhost/PurchaseableEnchants',
+    downloads: 'https://github.com/Eluinhost/PurchaseableEnchants/releases',
+    type: 'Plugin',
+    compat: 'Any?'
   }
 ];
 
