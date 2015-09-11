@@ -48,6 +48,24 @@ var projects = [
     downloads: 'https://github.com/UltraSoftcore/hiddenhealth/releases',
     type: 'Plugin',
     compat: '1.7.9+'
+  },
+  {
+    name: 'ChunkBiomes',
+    version: '1.0.0',
+    description: 'Create maps with per-chunk gridded biomes with walls',
+    source: 'https://github.com/Eluinhost/ChunkBiomes',
+    downloads: 'https://github.com/Eluinhost/ChunkBiomes/releases',
+    type: 'Plugin',
+    compat: '1.8.8'
+  },
+  {
+    name: 'Migration',
+    version: '1.0.0',
+    description: 'Plugin to make people move between areas or suffer damage',
+    source: 'https://github.com/Eluinhost/migration',
+    downloads: 'https://github.com/Eluinhost/migration/releases',
+    type: 'Plugin',
+    compat: '1.8.8'
   }
 ];
 
